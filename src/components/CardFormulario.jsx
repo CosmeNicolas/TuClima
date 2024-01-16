@@ -4,8 +4,10 @@ import nubes from '../assets/nubes.jpg'
 
 const CardFormulario = ({datosClima}) => {
   if (!datosClima) {
-    return <Alert variant='primary'>No hay datos de clima disponibles</Alert>;
+    return <Alert variant='primary' className='mt-3'>No hay datos de clima disponibles</Alert>;
   }
+
+
   return (
     <>
       <Card className='my-3 cards'>
@@ -13,9 +15,11 @@ const CardFormulario = ({datosClima}) => {
         <Card.Body>
           <Card.Title>{datosClima.name}</Card.Title>
           <ListGroup variant="flush">
-            <ListGroup.Item>Cras justo odio</ListGroup.Item>
-            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+            <ListGroup.Item>Humedad:  {datosClima.main.humidity}</ListGroup.Item>
+            <ListGroup.Item>Presion: {datosClima.main.pressure} </ListGroup.Item>
+            <ListGroup.Item>Sensación Termica: {datosClima.main.feels_like}</ListGroup.Item>
+            <ListGroup.Item>Temperatura Minima: {datosClima.main.temp_min}</ListGroup.Item>
+            <ListGroup.Item>Temperatura Maxima: {datosClima.main.temp_max}</ListGroup.Item>
           </ListGroup>
         </Card.Body>
       </Card>
