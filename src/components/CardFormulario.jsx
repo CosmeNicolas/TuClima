@@ -7,6 +7,10 @@ const CardFormulario = ({datosClima}) => {
     return <Alert variant='primary' className='mt-3'>No hay datos de clima disponibles</Alert>;
   }
 
+  const redondearTemperatura = (temperatura)=>{
+    return Math.round(temperatura / 10)
+  }
+ 
 
   return (
     <>
@@ -15,11 +19,12 @@ const CardFormulario = ({datosClima}) => {
         <Card.Body>
           <Card.Title>{datosClima.name}</Card.Title>
           <ListGroup variant="flush">
-            <ListGroup.Item>Humedad:  {datosClima.main.humidity}</ListGroup.Item>
-            <ListGroup.Item>Presion: {datosClima.main.pressure} </ListGroup.Item>
-            <ListGroup.Item>Sensación Termica: {datosClima.main.feels_like}</ListGroup.Item>
-            <ListGroup.Item>Temperatura Minima: {datosClima.main.temp_min}</ListGroup.Item>
-            <ListGroup.Item>Temperatura Maxima: {datosClima.main.temp_max}</ListGroup.Item>
+            <ListGroup.Item>Humedad: {datosClima.main.humidity} % </ListGroup.Item>
+            <ListGroup.Item>Presion: {datosClima.main.pressure} Pa</ListGroup.Item>
+            <ListGroup.Item>Presion: {datosClima.wind.speed} km/h</ListGroup.Item>
+            <ListGroup.Item>Sensación Termica: {redondearTemperatura(datosClima.main.feels_like)}°C</ListGroup.Item>
+            <ListGroup.Item>Temperatura Minima: {redondearTemperatura(datosClima.main.temp_min)}°C</ListGroup.Item>
+            <ListGroup.Item>Temperatura Maxima: {redondearTemperatura(datosClima.main.temp_max)}°C</ListGroup.Item>
           </ListGroup>
         </Card.Body>
       </Card>
