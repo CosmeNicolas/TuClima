@@ -24,18 +24,19 @@ sans-serif;
   flex-grow: 1;
 }
 
+body{
+  background-color: #030637;
+}
+
 h1{
   font-family: 'Moirai One',system-ui;
   text-align: center;
   color: aliceblue;
 }
 
-body{
-  background-color: #280536;
-}
+
 
 footer{
-  background-color: #030637;
+  background-color: #3C0753;
   color: aliceblue;
-  text-align: center;
 }
