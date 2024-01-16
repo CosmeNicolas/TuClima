@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&family=Noto+Sans+SC:wght@300&family=Roboto+Condensed:wght@300&display=swap');
+
+/* color
+
+#030637 #3C0753 #720455 #910A67
+*/
+
+/* feuntes
+font-family: 'Moirai One',
+system-ui;
+font-family: 'Noto Sans SC',
+sans-serif;
+font-family: 'Roboto Condensed',
+sans-serif;
+*/
+
 #root {
   min-height: 100vh;
   display: flex;
@@ -6,4 +22,19 @@
 
 .main {
   flex-grow: 1;
+}
+
+h1{
+  font-family: 'Moirai One',
+      system-ui;
+}
+
+body{
+  background-color: #280536;
+}
+
+footer{
+  background-color: #030637;
+  color: aliceblue;
+  text-align: center;
 }
