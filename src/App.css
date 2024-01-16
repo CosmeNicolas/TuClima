@@ -25,8 +25,9 @@ sans-serif;
 }
 
 h1{
-  font-family: 'Moirai One',
-      system-ui;
+  font-family: 'Moirai One',system-ui;
+  text-align: center;
+  color: aliceblue;
 }
 
 body{

@@ -2,7 +2,7 @@
 
 const Footer = () => {
   return (
-    <footer className=' text-center py-3'>
+    <footer className='py-3'>
       <p>&copy; Todos los derechos reservados</p>
     </footer>
   );

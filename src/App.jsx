@@ -8,7 +8,7 @@ function App() {
   return (
     <>
     <Container className='main'>
-    <h1 className='mt-5 text-center text-light'>TuClima</h1>
+    <h1>TuClima</h1>
     </Container>
     <Footer/>
     </>
