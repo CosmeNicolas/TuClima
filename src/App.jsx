@@ -10,7 +10,7 @@ function App() {
   return (
     <>
     <Container className='main'>
-    <h1 className="text-center mt-5">TuClima</h1>
+    <h1 className="text-center mt-5">TuClima⛅</h1>
     <Formulario/>
     </Container>
     <Footer/>
