@@ -15,6 +15,7 @@ const Formulario = () => {
     const datosClima = await (respuestaApiClima).json()
     setDatosClima(datosClima)
     console.log(datosClima)
+    setCiudad('')
   }
 
 
