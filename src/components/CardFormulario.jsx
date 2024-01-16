@@ -17,7 +17,7 @@ const CardFormulario = ({datosClima}) => {
 
   return (
     <>
-      <div className='mt-4 div-contenedor-card'>
+      <div className='my-4 div-contenedor-card'>
         <Card className='my-3 contenedor-card' >
           <Image src={verlluvia ? lluvia : nubes} className='img-fluid cards'/>
         <Card.Body>
