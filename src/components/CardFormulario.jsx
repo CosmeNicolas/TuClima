@@ -1,12 +1,17 @@
-import {Card, ListGroup}  from 'react-bootstrap'
+import {Card, ListGroup, Image,Alert}  from 'react-bootstrap'
+import nubes from '../assets/nubes.jpg'
 
-const CardFormulario = () => {
+
+const CardFormulario = ({datosClima}) => {
+  if (!datosClima) {
+    return <Alert variant='primary'>No hay datos de clima disponibles</Alert>;
+  }
   return (
     <>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px180" />
+      <Card className='my-3 cards'>
+        <Image src={nubes} className='img-fluid'/>
         <Card.Body>
-          <Card.Title>Card Title</Card.Title>
+          <Card.Title>{datosClima.name}</Card.Title>
           <ListGroup variant="flush">
             <ListGroup.Item>Cras justo odio</ListGroup.Item>
             <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
