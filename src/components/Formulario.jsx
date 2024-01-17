@@ -25,7 +25,7 @@ const Formulario = () => {
       // Iniciar la carga
       setCargando(true);
 
-      const respuestaApiClima = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=7a9a4933445cff553f7abda64a0617e6`)
+      const respuestaApiClima = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=7a9a4933445cff553f7abda64a0617e6`)
       const datosClima = await (respuestaApiClima).json()
       setDatosClima(datosClima)
       setCargando(false)
