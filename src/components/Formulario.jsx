@@ -9,10 +9,9 @@ const Formulario = () => {
   const [datosClima, setDatosClima] = useState(null)
   const [cargando, setCargando] = useState(false)
   const [error, setError] = useState(null)
-  console.log(ciudad)
 
   const handleSubmit = async (e)=>{
-    e.preventDefault()
+    e.preventDefault();
    
     console.log(datosClima)
     // Validar que la ciudad no esté vacía
