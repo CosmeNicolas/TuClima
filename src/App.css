@@ -35,6 +35,9 @@ h1{
   font-size: 40px;
 }
 
+/* HTML: <div class="loader"></div> */
+
+
 .div-contenedor-card{
   display: flex;
     justify-content: center;
