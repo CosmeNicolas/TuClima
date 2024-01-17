@@ -10,33 +10,34 @@ const Formulario = () => {
   const [cargando, setCargando] = useState(false)
   const [error, setError] = useState(null)
 
-  const handleSubmit = async (e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-   
-    console.log(datosClima)
-    // Validar que la ciudad no esté vacía
+
     if (!ciudad.trim()) {
       setError('Por favor, ingresa el nombre de una ciudad.');
       return;
     }
 
     try {
-      // Iniciar la carga
       setCargando(true);
 
-      const respuestaApiClima = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=7a9a4933445cff553f7abda64a0617e6`)
-      const datosClima = await (respuestaApiClima).json()
-      setDatosClima(datosClima)
-      setCargando(false)
-      setError(null)
-    } catch (error) { 
-      //manejar los errores 
-      console.log('error al consulatr', error);
-      setCargando(false)
+      const respuestaApiClima = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=7a9a4933445cff553f7abda64a0617e6`);
+      const datosClima = await respuestaApiClima.json();
+
+      if (respuestaApiClima.ok) {
+        setDatosClima(datosClima);
+        setError(null);
+      } else {
+        setError('No se encontraron datos para la ciudad ingresada.');
+      }
+
+      setCargando(false);
+    } catch (error) {
+      console.error('Error al consultar', error);
+      setCargando(false);
       setError('Hubo un error al consultar el clima. Por favor, intenta nuevamente.');
     }
-  }
-
+  };
 
  
 
