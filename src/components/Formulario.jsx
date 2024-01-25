@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Form, Button, Alert , Spinner}  from 'react-bootstrap'
+import { Form, Button, Alert, Spinner } from 'react-bootstrap'
 import CardFormulario from './CardFormulario'
 
 
@@ -39,25 +39,25 @@ const Formulario = () => {
     }
   };
 
- 
+
 
   return (
     <>
-    <Form onSubmit={handleSubmit} className='mt-5'>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label className='text-light'>Ingresa una Ciudad</Form.Label>
-        <Form.Control
-        type="text" 
-        placeholder="Ingresa una ciudad" 
-        value={ciudad}
-        onChange={(e)=>setCiudad(e.target.value)}/>
-      </Form.Group>
-      <div className='text-center'>
+      <Form onSubmit={handleSubmit} className='mt-5'>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label className='text-light'>Ingresa una Ciudad</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Ingresa una ciudad"
+            value={ciudad}
+            onChange={(e) => setCiudad(e.target.value)} />
+        </Form.Group>
+        <div className='text-center'>
           <Button variant="primary" type="submit" disabled={cargando}>
             {cargando ? <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" /> : 'Consultar'}
-      </Button>
-      </div>
-    </Form>
+          </Button>
+        </div>
+      </Form>
 
       {error && <Alert variant='danger' className='mt-3'>{error}</Alert>}
 
